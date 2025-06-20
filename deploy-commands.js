@@ -1,5 +1,7 @@
 const { REST, Routes, SlashCommandBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require('discord.js');
-const { clientId, guildId, token } = require('./config.json');
+require('dotenv').config();
+const { clientId, guildId } = require('./config.json');
+const token = process.env.DISCORD_TOKEN;
 
 // Slash command
 const commands = [
